@@ -4,7 +4,7 @@ fn main() {
     let mut d1: &String = &a;
     let d2: &mut String = &mut a;
 
-    let _s1 = "😂 옻옺웃ӱ";
+    let s1 = "😂 옻옺웃ӱ";
     let _s2 = String::from("😂 옻옺웃");
     let _s3 = "😂 옻옺웃".to_string();
     let s4 = "😂 옻옺웃".to_owned();
@@ -22,5 +22,8 @@ fn main() {
     let ssss = String::from("hello world");
 
     let world = &ssss[6..11];
+
+
+
 
 }

@@ -41,8 +41,8 @@ fn main() {
     book.set_name("asdasd");
     println!("Name: {}", book.name);
     println!("sales tax: {}", sales_tax);
-    println!("xxxx: {}", book.price);
+    println!("Price: {}", book.price);
     book.set_price(1.0);
-    println!("xxxx: {}", book.price);
+    println!("Price: {}", book.price);
     book.buy();
 }
