@@ -1,41 +1,37 @@
-// Complete the function to make the program execute successfully.
+// Fix the code so that it compiles.
 
-fn remove_if_odd(nums: &mut Vec<i32>, index: usize) {
-    if index > nums.len() {
-        println!("Index out of bounds");
-        return;
-    } else {
+struct Student {
+    name: String,
+    marks: u8,
+    grade: char,
+}
 
-        if let Some(num) = nums.get(index) {
-            if num % 2 == 0 {
-                println!("Is Even");
-            }
-            else {
-                println!("Is Odd");
-                nums.remove(index);
-            }
-
+impl Student {
+    fn new(name: &str, marks: u8) -> Self {
+        Self {
+            name: name.to_string(),
+            marks,
+            grade: 'X',
         }
-
     }
 }
 
 fn main() {
-    let mut nums = vec![1, 2, 6, 9];
-    let nums_ref = &mut nums;
-    remove_if_odd(nums_ref, 0);
-    remove_if_odd(nums_ref, 1);
-    remove_if_odd(nums_ref, nums_ref.len() - 1);
-    // assert_eq!(nums.len(), 2);
-    println!("{:?}", nums);
-
-
-    println!("XXXXXXXXXXXXXxx");
-    let mut aaa = "xxx".to_string();
-    let asd = &mut aaa;
-    asd.push_str("vbnvbn");
-    
-    println!("aaa:{}", aaa);
-    println!("asd:{}", asd); 
-
+    let mut students = vec![
+        Student::new("Harry", 75),
+        Student::new("Hermoine", 99),
+        Student::new("Ron", 60),
+    ];
+    for student in &mut students {
+        student.grade = if student.marks > 80 {
+            'A'
+        } else if student.marks > 60 {
+            'B'
+        } else {
+            'C'
+        };
+    }
+    for student in students {
+        println!("{} got {}!", student.name, student.grade);
+    }
 }

@@ -30,5 +30,4 @@ fn main() {
         v3.push(s);
     }
 
-    // let i = v.get(0);
 }

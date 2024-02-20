@@ -22,9 +22,9 @@ fn main() {
 
     // greet();
 
-    // let x = rand::thread_rng().gen_range(0, 100);
+    let x = rand::thread_rng().gen_range(0, 100);
 
-    // println!("Hello, world!  {}", x);
+    println!("Hello, world!  {}", x);
 
     // let num = 4;
 
